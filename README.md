@@ -11,7 +11,7 @@ brew --prefix duckdb
 ```
 
 ```elixir
-Mix.install([{:duxdb_ecto, github: "ruslandoga/duxdb_ecto"}],
+Mix.install([{:decko, github: "ruslandoga/decko"}],
   force: true,
   system_env: [
     DUXDB_CFLAGS: "-I/opt/homebrew/opt/duckdb/include",
@@ -20,7 +20,7 @@ Mix.install([{:duxdb_ecto, github: "ruslandoga/duxdb_ecto"}],
 )
 
 defmodule Repo do
-  use Ecto.Repo, adapter: DuxDB.Ecto, otp_app: :demo
+  use Ecto.Repo, adapter: Decko, otp_app: :demo
 end
 
 Application.put_env(:demo, Repo, database: ":memory:")

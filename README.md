@@ -14,8 +14,8 @@ brew --prefix duckdb
 Mix.install([{:ectoduck, github: "ruslandoga/EctoDuck"}],
   force: true,
   system_env: [
-    DUXDB_CFLAGS: "-I/opt/homebrew/opt/duckdb/include",
-    DUXDB_LDFLAGS: "-L/opt/homebrew/opt/duckdb/lib"
+    DUCKDB_NIFS_CFLAGS: "-I/opt/homebrew/opt/duckdb/include",
+    DUCKDB_NIFS_LDFLAGS: "-L/opt/homebrew/opt/duckdb/lib"
   ]
 )
 
